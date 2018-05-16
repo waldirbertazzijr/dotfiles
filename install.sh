@@ -23,5 +23,5 @@ fi
 
 # Loading bash_custom on bashrc
 if [ -f /home/$USER/.bashrc ]; then
-    echo -e '\n\nif [ -f ~/.bash_custom ]; then\n\t. ~/.bash_custom\nfi' >> /home/$USER/.bashrc
+    echo -e "\n\nif [ -f ~/.bash_custom ]; then\n\t. ~/.bash_custom\nfi" >> /home/$USER/.bashrc
 fi

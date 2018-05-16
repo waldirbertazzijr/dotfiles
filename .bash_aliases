@@ -1,1 +1,5 @@
-# Empty for now, must update with the same file that is on my work's PC.
+# Start development machine
+alias start_dev='VBoxManage startvm "Development" --type headless'
+
+# Connect to local development machine
+alias dev="ssh -i ~/.ssh/id_rsa -p 2222 waldirbj@localhost"
