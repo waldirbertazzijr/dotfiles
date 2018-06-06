@@ -2,12 +2,12 @@
 
 # Wallpapers...
 printf "Copying wallpapers to /home/$USER/.wallpapers..."
-cp -r ./wallpapers /home/$USER/wallpapers
-ln -s /home/$USER/wallpapers /home/$USER/Pictures/Wallpapers
+cp -r ./wallpapers /home/$USER/.wallpapers
+ln -s /home/$USER/.wallpapers /home/$USER/Pictures/Wallpapers
 
 # Fonts...
 printf "Copying fonts to /home/$USER/.fonts..."
-cp -r ./fonts /home/$USER/fonts
+cp -r ./fonts /home/$USER/.fonts
 
 # New bash_aliases...
 if [ ! -f /home/$USER/.bash_aliases ]; then
