@@ -1,27 +1,27 @@
 #!/bin/sh
 
 # Wallpapers...
-echo "Copying wallpapers to /home/$USER/.wallpapers..."
+printf "Copying wallpapers to /home/$USER/.wallpapers..."
 cp -r ./wallpapers /home/$USER/wallpapers
 ln -s /home/$USER/wallpapers /home/$USER/Pictures/Wallpapers
 
 # Fonts...
-echo "Copying fonts to /home/$USER/.fonts..."
+printf "Copying fonts to /home/$USER/.fonts..."
 cp -r ./fonts /home/$USER/fonts
 
 # New bash_aliases...
 if [ ! -f /home/$USER/.bash_aliases ]; then
-    echo "bash_aliases not found, copying new one."
+    printf "bash_aliases not found, copying new one."
     cp ./.bash_aliases /home/$USER/.bash_aliases
 fi
 
 # Some customizations...
 if [ ! -f /home/$USER/.bash_custom ]; then
-    echo "bash_custom not found, copying new one."
+    printf "bash_custom not found, copying new one."
     cp ./.bash_custom /home/$USER/.bash_custom
 fi
 
 # Loading bash_custom on bashrc
 if [ -f /home/$USER/.bashrc ]; then
-    echo -e "\n\nif [ -f ~/.bash_custom ]; then\n\t. ~/.bash_custom\nfi" >> /home/$USER/.bashrc
+    printf "\n\nif [ -f ~/.bash_custom ]; then\n\t. ~/.bash_custom\nfi" >> /home/$USER/.bashrc
 fi
